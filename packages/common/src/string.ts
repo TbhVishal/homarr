@@ -32,7 +32,7 @@ export const bestMatch = <TItem extends Record<string, unknown>>(
 };
 
 export const normalizeImageName = (value: string) => {
-  const fileName = value.split(/[?#]/, 1)[0]?.split("/").pop() ?? value;
+  const fileName = value.split(/[?#]/, 1)[0]?.split(/[\\/]/).pop() ?? value;
   const withoutExtension = fileName.replace(/\.(?:avif|gif|jpe?g|png|svg|webp)$/i, "");
 
   return withoutExtension

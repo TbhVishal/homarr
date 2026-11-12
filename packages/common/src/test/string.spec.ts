@@ -59,6 +59,8 @@ describe("image name matching", () => {
   test.each([
     ["home-assistant.svg", "home assistant"],
     ["https://example.com/Home_Assistant.PNG?v=1", "home assistant"],
+    ["C:\\Users\\Homarr\\icons\\Home_Assistant.PNG?v=1", "home assistant"],
+    ["icons\\home-assistant.svg", "home assistant"],
     ["jelly.fin.webp", "jelly fin"],
     ["Caf\u00e9.svg", "cafe"],
     ["\u6771\u4eac.svg", "\u6771\u4eac"],
